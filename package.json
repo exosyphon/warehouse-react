@@ -49,7 +49,6 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "chromedriver": "^2.35.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1"
   },
