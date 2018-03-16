@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import {WarehouseContainer} from '../warehouse/warehouse_container';
+import { Provider } from 'react-redux';
+import configureStore from '../redux/store/configureStore';
 
-class App extends Component {
+const store = configureStore();
+
+class App extends React.Component {
   render() {
     return (
-      <div className="app">
-        <header className="app-header">
-          <h1>Warehouse Viewer</h1>
-        </header>
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <td>Hi</td>
-                <td>Hi</td>
-                <td>Hi</td>
-                <td>Hi</td>
-              </tr>
-            </tbody>
-          </table>
+      <Provider store={store}>
+        <div className="app">
+         <WarehouseContainer />
         </div>
-      </div>
+      </Provider>
     );
   }
 }
